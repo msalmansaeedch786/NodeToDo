@@ -4,11 +4,12 @@ phases:
   install:
     runtime-versions:
       nodejs: 10  
-
+  pre_build: 
+    commands: 
+      - echo Nothing to do in the pre_build phase... 
   build:
     commands:
       - echo Build started on `date`
-      - echo Compiling the Node.js code
       - npm install
   post_build:
     commands:
